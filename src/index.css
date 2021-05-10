@@ -1,0 +1,41 @@
+.MyNavbar
+{
+  box-shadow: 5px 5px 5px #c7c5c5;
+
+}
+.HeadText
+{
+  font-family: 'Roboto', sans-serif;
+}
+.nav-item
+{
+  font-family: 'Roboto', sans-serif;
+
+}
+.AddBookForm
+{
+ margin-top: 2%;
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  float:left;
+  margin-left: 40%;
+  margin-right: 40%;
+  /* height: 300px; */
+  /* width: 300px; */
+  padding: 30px 40px;
+  align-items: center;
+  /* background-color: #e3e3e3; */
+
+}
+.AddBookForm button
+{
+  border: none;
+  padding: 10px;
+  background-color: #763d97;
+  color: white;
+  font-size: 15px;
+  /* margin-left: 10px; */
+  border-radius: 5px;
+  width: 100%;
+  font-family: 'Roboto', sans-serif;
+  
+}
