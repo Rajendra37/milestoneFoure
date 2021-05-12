@@ -18,7 +18,7 @@ export default function Addbook() {
 
     const submitBookData=(e:any)=>{
         e.preventDefault();
-        dispatch({type: 'ADD_BOOK',book:bookData});
+        dispatch({type: 'ADD_NEW_BOOK',book:bookData});
         console.log("Book data",bookData);
         history.push('/')
        

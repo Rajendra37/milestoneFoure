@@ -1,11 +1,13 @@
-import React from 'react'
+import React,{useContext}from 'react'
 import { Switch, Route, NavLink } from "react-router-dom";
 import 'bootstrap/dist/css/bootstrap.css'
 import '../index.css'
+import { BookContext } from '../context/BookContext'
 
 
 
 export default function Navbar() {
+    const{state}=useContext<any>(BookContext)
 
     return (
         <>
@@ -22,7 +24,7 @@ export default function Navbar() {
                             <NavLink className="nav-link" to="/Book">Books</NavLink>
                         </li>
                         <li className="nav-item">
-                        <NavLink className="nav-link text-uppercase" to="/Addbook">AddBooks</NavLink>
+                        {state.isLogedIn ? <NavLink className="nav-link text-uppercase" to="/Addbook">AddBooks</NavLink>:null}
                         </li>
                         <li className="nav-item">
                         <NavLink className="nav-link text-uppercase" to="/Login">Login</NavLink>

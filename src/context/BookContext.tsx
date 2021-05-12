@@ -1,14 +1,19 @@
 import React,{useReducer,useEffect} from 'react';
-import { BookReducer } from '../Reducer/BookReducer';
+import{BookReducer} from '../Reducer/BookReducer'
+import {store} from '../Reducer/Store'
 
 export const BookContext = React.createContext({});
 
  const BookContextProvider=(props:any)=>{
-    const [books, dispatch] = useReducer(BookReducer,[]);
-    console.log(books);
+    const [state, dispatch] = useReducer<any>(BookReducer, store);
+    console.log(state);
+   
+    useEffect(() => {
+       
+    }, [state])
     
     return(
-        <BookContext.Provider value={{books,dispatch}}>
+        <BookContext.Provider value={{state,dispatch}}>
         {props.children}
         </BookContext.Provider>
     )
